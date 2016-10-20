@@ -50,7 +50,8 @@ sampling_rate: 30000.0
 (you may include any other metadata you like, such as experimenter, date etc.)
 
 to create a .meta file interactively, type:
-python datmeta.py {dat}
+
+$ dat-meta {dat}
         """.format(dat=datfile))
         sys.exit(0)
 
