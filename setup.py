@@ -1,11 +1,12 @@
 from __future__ import print_function
 from setuptools import setup
-
-import datutils
+import re
+VERSIONFILE="datutils/_version.py"
+version = open(VERSIONFILE, "rt").read().split('"')[-2]
 
 setup(
         name='datutils',
-        version=datutils.__version__,
+        version=version,
         url='http://github.com/kylerbrown/datutils/',
         author="Kyler Brown",
         author_email="kylerjbrown@gmail.com",
@@ -13,6 +14,7 @@ setup(
         platforms="any",
         install_requires=[
             'ewave',
+            'PyYAML',
             'numpy',
             'scipy',
             'matplotlib',

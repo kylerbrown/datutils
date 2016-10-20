@@ -6,6 +6,11 @@ All tools stream from disk, making them fast and memory efficient.
 
 The raw binary format is specified here: http://neurosuite.sourceforge.net/formats.html
 
+For multi-channel files, samples are interleaved. A raw binary file with N channels and M samples looks like this:
+
+    c1s1, c2s1, c3s1, ..., cNs1, c1s2, c2s2, c3s2, ..., c1sM, c2sM, c3sM,...,cNsM 
+
+In python, a numpy array can be saved as raw binary by using the [`tobytes`](https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.tobytes.html) method. 
 Many electrophysiology programs can read raw binary files including
 
 - [neuroscope](http://neurosuite.sourceforge.net)
@@ -20,8 +25,9 @@ Many electrophysiology programs can read raw binary files including
 - numpy
 - scipy
 - matplotlib
+- PyYAML
 
-If this sounds daunting, I recomend using [anaconda](https://www.continuum.io/downloads) which includes these packages.
+If installing these requirements sounds daunting, I recomend using [anaconda](https://www.continuum.io/downloads), which includes these packages.
 
 ### instructions
 

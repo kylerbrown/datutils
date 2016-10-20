@@ -1,7 +1,11 @@
-from builtins import input
 
 from datutils.utils import write_metadata
 
+# py2/3 compatibility
+try:
+       input = raw_input
+except NameError:
+       pass
 
 def datmeta(datfiles):
     sr = False
