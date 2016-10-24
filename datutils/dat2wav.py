@@ -27,7 +27,7 @@ def main():
     p.add_argument("dat", help="dat file to convert to wav, can be any number of channels but you probably want 1 or 2")
     p.add_argument("-o", "--out", help="name of output wav file")
     options = p.parse_args()
-    main(options.dat, options.out)
+    dat2wav(options.dat, options.out)
 
 if __name__ == "__main__":
     main()
