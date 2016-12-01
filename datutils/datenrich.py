@@ -68,6 +68,10 @@ def datenrich(dat, channels, out, label, window):
         os.path.splitext(out)[0] + ".label",
         header=True,
         index=False)
+    if os.path.isfile(label+".meta"):
+        shutil.copyfile(label+".meta",
+            os.path.splitext(out)[0] + ".label.meta")
+
 
 
 def main():

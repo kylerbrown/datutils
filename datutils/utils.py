@@ -71,3 +71,4 @@ def write_metadata(dat_filename, sampling_rate, n_channels, dtype, **kwargs):
         header = """# metadata for raw binary file (.dat) using YAML syntax\n---\n"""
         yaml_file.write(header)
         yaml_file.write(yaml.dump(params, default_flow_style=False))
+

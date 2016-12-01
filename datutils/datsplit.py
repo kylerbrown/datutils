@@ -10,7 +10,7 @@ def datsplit(datfile, chan_select=(), outfile=None):
     nchannels = params.pop("n_channels")
     dtype = params.pop("dtype")
     if not chan_select:
-        chan_select = np.range(nchannels)
+        chan_select = range(nchannels)
     if outfile is None:
         outfile = datfile + "_".join([str(x) for x in chan_select]) + ".dat"
     nbuf = nchannels * BUFFER_SIZE
@@ -32,7 +32,8 @@ def main():
                    "--chan-select",
                    help="channels to extract",
                    nargs="+",
-                   type=int)
+                   type=int,
+                   required=True)
     p.add_argument("-o", "--out", help="name of output dat file")
     options = p.parse_args()
     datsplit(options.dat, options.chan_select, options.out)
