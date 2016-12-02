@@ -1,5 +1,6 @@
 from __future__ import division, print_function, absolute_import, \
         unicode_literals
+import shutil
 import os.path
 import numpy as np
 import pandas as pd
