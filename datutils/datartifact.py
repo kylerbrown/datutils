@@ -3,6 +3,8 @@ absolute_import
 
 from shutil import copyfile
 import numpy as np
+import matplotlib as mpl
+mpl.use('Agg')
 import matplotlib.pyplot as plt
 import matplotlib.cm as cm
 from scipy.signal import butter, lfilter, argrelmax, argrelmin
