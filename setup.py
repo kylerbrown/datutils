@@ -6,6 +6,7 @@ version = open(VERSIONFILE, "rt").read().split('"')[-2]
 
 setup(
         name='datutils',
+        packages=['datutils'],
         version=version,
         url='http://github.com/kylerbrown/datutils/',
         author="Kyler Brown",
