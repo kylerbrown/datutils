@@ -25,7 +25,7 @@ def main():
     """)
     p.add_argument("dat", help="dat file")
     p.add_argument("-c", "--channels",
-            help="channels to difference, zero indexed, default: 0 1",
+            help="channels to difference, zero indexed, default: 0 1, subtracts second channel from first.",
             type=int, nargs="+")
     p.add_argument("-o", "--out",
                    help="name of output dat file")
