@@ -1,3 +1,4 @@
+Note: as of bark v0.2, datutils has been integrated into bark and has been **depreciated**. The code in the repository is only compatible with bark v0.1.
 # datutils
 
 Commandline tools for creating signal processing data pipelines with continuously sampled raw binary data, also known as pulse code modulated (PCM) files, often with a `.dat` extension.
